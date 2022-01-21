@@ -2,6 +2,7 @@
     "name": "react-vantajs",
     "version": "0.1.0",
     "private": true,
+    "homepage": "http://l3ossdevz.github.io/react-vantajs/",
     "dependencies": {
         "@testing-library/jest-dom": "^5.16.1",
         "@testing-library/react": "^12.1.2",
@@ -17,6 +18,8 @@
         "build": "react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build",
         "prettier": "prettier --write '{**/*.{js,jsx,ts,tsx,json,css,scss,md},src/**/*.{js,jsx,ts,tsx,json,css,scss,md},test/**/*.{js,jsx,ts,tsx,json,css,scss,md}}'",
         "prettier:watch": "onchange '{**/*.{js,jsx,ts,tsx,json,css,scss,md},src/**/*.{js,jsx,ts,tsx,json,css,scss,md},test/**/*.{js,jsx,ts,tsx,json,css,scss,md}}' -- prettier --write {{changed}}"
     },
@@ -42,6 +45,7 @@
         ]
     },
     "devDependencies": {
+        "gh-pages": "^3.2.3",
         "onchange": "^7.1.0",
         "prettier": "^2.5.1",
         "source-map-explorer": "^2.5.2",
