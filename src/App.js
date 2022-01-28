@@ -1,23 +1,23 @@
-import logo from './logo.svg'
-import { useEffect, useRef, useState } from 'react'
-import './App.css'
-import BIRDS from 'vanta/dist/vanta.birds.min'
+import logo from "./logo.svg";
+import { useEffect, useRef, useState } from "react";
+import "./App.css";
+import BIRDS from "vanta/dist/vanta.birds.min";
 
 function App() {
-    const [vantaEffect, setVantaEffect] = useState(0)
-    const myRef = useRef(null)
+    const [vantaEffect, setVantaEffect] = useState(0);
+    const myRef = useRef(null);
     useEffect(() => {
         if (!vantaEffect) {
             setVantaEffect(
                 BIRDS({
                     el: myRef.current,
                 })
-            )
+            );
         }
         return () => {
-            if (vantaEffect) vantaEffect.destroy()
-        }
-    }, [vantaEffect])
+            if (vantaEffect) vantaEffect.destroy();
+        };
+    }, [vantaEffect]);
     return (
         <div id="app-background" className="app">
             <header className="app__header" ref={myRef}>
@@ -31,7 +31,7 @@ function App() {
                 </div>
             </header>
         </div>
-    )
+    );
 }
 
-export default App
+export default App;
